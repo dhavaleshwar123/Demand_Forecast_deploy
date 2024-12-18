@@ -2,14 +2,14 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
+import pickle
 from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings('ignore')
 
 # Load the trained model and scaler
-xgb_hyp = joblib.load("Demand_Forecast.pkl")
-scaler = joblib.load("DF.pkl")
+xgb_hyp = pkl.load("Demand_Forecast.pkl")
+scaler = pkl.load("DF.pkl")
 
 # Custom CSS for styling
 st.markdown(
